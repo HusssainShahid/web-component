@@ -39,7 +39,7 @@ npm i javascript-web-components
 ```html
 <script src="node_modules/javascript-web-components/dist/main.js"></script>
 
-<my-component></component>
+<my-component></my-component>
 ```
 ## Documentation
 
