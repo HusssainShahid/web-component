@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Avatar card</title>
+    <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
+    <script src="../node_modules/web-component-tester/browser.js"></script>
+    <script src="../dist/main.js"></script>
+</head>
+<body>
+<avatar-list>
+    <avatar-card id="avatar-card">
+        <div slot="img">
+            <img-item src="https://www.w3schools.com/images/w3schools_green.jpg" alt="Img" width="60px" height="60px"></img-item>
+        </div>
+        <div slot="body">
+            <b>Name: </b><span>Abcd abcd</span><br>
+        </div>
+        <div slot="body">
+            <b>Position: </b><span>Web Developer</span><br>
+        </div>
+        <div slot="body">
+            <b>Position Id: </b><span>123</span><br>
+        </div>
+    </avatar-card>
+</avatar-list>
+
+<script>
+    suite('<avatar-list>', function () {
+        let avatarList = document.getElementById("avatar-card");
+        test('render component', () => {
+            assert.isOk(avatarList);
+        });
+        let component = document.querySelector('avatar-list').shadowRoot.querySelector('div');
+        test('renders div', () => {
+            assert.isOk(component);
+        });
+    });
+</script>
+</body>
+</html>

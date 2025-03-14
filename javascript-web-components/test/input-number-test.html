@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Input Text</title>
+    <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
+    <script src="../node_modules/web-component-tester/browser.js"></script>
+    <script src="../dist/main.js"></script>
+</head>
+<body>
+<input-number id="input" placeholder="Enter number.." max="15" min="3" required>
+    <span slot="label">Number</span>
+</input-number>
+
+<script>
+    suite('<input-number>', function () {
+        let inputNumber = document.getElementById("input");
+        test('render component', () => {
+            assert.isOk(inputNumber);
+        });
+        let component = document.querySelector('input-number').shadowRoot.querySelector('input');
+        test('renders input', () => {
+            assert.isOk(component);
+        });
+    });
+</script>
+</body>
+</html>

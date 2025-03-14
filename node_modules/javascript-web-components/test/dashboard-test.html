@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard</title>
+    <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
+    <script src="../node_modules/web-component-tester/browser.js"></script>
+    <script src="../dist/main.js"></script>
+</head>
+<body>
+<dash-board id="dashboard">
+    <nav-bar dark>
+        <nav-brand>
+            <a-href href="#" color="white">Nav Brand</a-href>
+        </nav-brand>
+        <nav-link>
+            <a-href href="#" color="white">Nav Link 1</a-href>
+        </nav-link>
+        <nav-link>
+            <a-href href="#" color="white">Nav Link 2</a-href>
+        </nav-link>
+        <nav-link>
+            <a-href href="#" color="white">Nav Link 3</a-href>
+        </nav-link>
+    </nav-bar>
+    <main-menu>
+        <heading-text center display="xl">Heading Text</heading-text>
+    </main-menu>
+</dash-board>
+<script>
+    suite('<dash-board>', function () {
+        let dashboard = document.getElementById("dashboard");
+        test('render component', () => {
+            assert.isOk(dashboard);
+        });
+        test('render nav-bar component', () => {
+            assert.isOk(dashboard.querySelector('nav-bar'));
+        });
+        test('render nav-link component', () => {
+            assert.isOk(dashboard.querySelector('nav-link'));
+        });
+        test('render nav-brand component', () => {
+            assert.isOk(dashboard.querySelector('nav-brand'));
+        });
+        test('render main-menu component', () => {
+            assert.isOk(dashboard.querySelector('main-menu'));
+        });
+    });
+</script>
+</body>
+</html>

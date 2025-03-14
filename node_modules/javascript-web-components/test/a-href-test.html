@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Link messages</title>
+    <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
+    <script src="../node_modules/web-component-tester/browser.js"></script>
+    <script src="../dist/main.js"></script>
+</head>
+<body>
+<a-href target="_top" id="href" href="https://stackoverflow.com/">Stack Overflow</a-href>
+<script>
+    suite('<a-href>', function () {
+        let href = document.getElementById("href");
+        test('render component', () => {
+            assert.isOk(href);
+        });
+        test('render anchor tag', () => {
+            assert.isOk(href.shadowRoot.querySelector('a'));
+        });
+    });
+</script>
+</body>
+</html>

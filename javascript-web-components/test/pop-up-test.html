@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pop-up</title>
+    <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
+    <script src="../node_modules/web-component-tester/browser.js"></script>
+    <script src="../dist/main.js"></script>
+</head>
+<body>
+<pop-up id="pop-up">
+    <outline-button slot='open-modal' content="Modal"></outline-button>
+    <div slot="modal-body">
+        <h4>Here is the modal body</h4>
+    </div>
+</pop-up>
+<script>
+    suite('<pop-up>', function () {
+        let popUp = document.getElementById("pop-up");
+        test('Render component', () => {
+            assert.isOk(popUp);
+        });
+        test('Render modal', () => {
+            assert.isOk(popUp.shadowRoot.querySelector('#myModal'));
+        });
+        test('Render button', () => {
+            assert.isOk(popUp.shadowRoot.querySelector('#myBtn'));
+        });
+        test('Test whether modal open on clicking "myBtn"', () => {
+            popUp.shadowRoot.querySelector('#myBtn').click();
+            assert.strictEqual(popUp.shadowRoot.querySelector('#myModal').style.display, 'block')
+        });
+        test('Test whether modal close on clicking "close"', () => {
+            popUp.shadowRoot.querySelector('.close').click();
+            assert.strictEqual(popUp.shadowRoot.querySelector('#myModal').style.display, 'none')
+        });
+    });
+</script>
+</body>
+</html>

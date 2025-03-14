@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Alert messages</title>
+    <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
+    <script src="../node_modules/web-component-tester/browser.js"></script>
+    <script src="../dist/main.js"></script>
+</head>
+<body>
+<alert-message id="alert" is="primary">
+    <label  slot="message">Primary</label>
+    <span slot="close">&times;</span>
+</alert-message>
+<script>
+    suite('<alert-message>', function () {
+        let alert = document.getElementById("alert");
+        test('render component', () => {
+            assert.isOk(alert);
+        });
+        test('render div', () => {
+            assert.isOk(alert.shadowRoot.querySelector('div'));
+        });
+    });
+</script>
+</body>
+</html>

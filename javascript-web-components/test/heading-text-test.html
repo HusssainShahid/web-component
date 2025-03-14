@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Heading text</title>
+    <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
+    <script src="../node_modules/web-component-tester/browser.js"></script>
+    <script src="../dist/main.js"></script>
+</head>
+<body>
+<heading-text id='heading' display="xl">Heading</heading-text>
+<script>
+    suite('<heading-text>', function () {
+        let heading = document.getElementById("heading");
+        test('render component', () => {
+            assert.isOk(heading);
+        });
+        test('render paragraph tag', () => {
+            assert.isOk(heading.shadowRoot.querySelector('p'));
+        });
+    });
+</script>
+</body>
+</html>

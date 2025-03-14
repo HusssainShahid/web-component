@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Call out</title>
+    <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
+    <script src="../node_modules/web-component-tester/browser.js"></script>
+    <script src="../dist/main.js"></script>
+</head>
+<body>
+<call-out is="primary" id="call-out">
+    <h2 slot="header">Header</h2>
+    <p slot="body">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
+        ut labore et dolore magna alicepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+        deserunt mollit anim id est laborum.</p>
+</call-out>
+<script>
+    suite('<call-out>', function () {
+        let callOut = document.getElementById("call-out");
+        test('render component', () => {
+            assert.isOk(callOut);
+        });
+        let component = document.querySelector('call-out').shadowRoot.querySelector('div');
+        test('renders call-out box', () => {
+            assert.isOk(component);
+        });
+    });
+</script>
+</body>
+</html>

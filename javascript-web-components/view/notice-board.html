@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Notification</title>
+    <script src="https://kit.fontawesome.com/e919059549.js"></script>
+    <script src="../dist/main.js"></script>
+
+</head>
+<body>
+<notice-board>
+    <notice-sliding
+            slot="notice"
+            header="Hello"
+            body="My name is abcd"
+            is="warning">
+        <img slot='icon' src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/SNice.svg/1200px-SNice.svg.png">
+        <outline-button content="Warning" is="warning" slot="button"></outline-button>
+    </notice-sliding>
+    <notice-sliding
+            slot="notice"
+            header="Hello"
+            body="My name is abcd"
+            is="success">
+        <h2 slot="icon">&#9749;</h2>
+        <outline-button content="Success" is="success" slot="button"></outline-button>
+    </notice-sliding>
+    <notice-sliding
+            slot="notice"
+            header="Hello"
+            body="My name is abcd"
+            is="primary">
+        <h2 slot="icon">&#9917;</h2>
+        <outline-button content="Primary" is="primary" slot="button"></outline-button>
+    </notice-sliding>
+</notice-board>
+</body>
+</html>

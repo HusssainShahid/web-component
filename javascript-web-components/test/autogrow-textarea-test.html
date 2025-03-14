@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Auto grow text area</title>
+    <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
+    <script src="../node_modules/web-component-tester/browser.js"></script>
+    <script src="../dist/main.js"></script>
+</head>
+<body>
+<autogrow-textarea id="input" placeholder="Enter your name here.." max="15" min="3" row="2" required>
+    <span slot="label">Description</span>
+</autogrow-textarea>
+
+<script>
+    suite('<autogrow-textarea>', function () {
+        let textArea = document.getElementById("input");
+        test('render component', () => {
+            assert.isOk(textArea);
+        });
+        let component = document.querySelector('autogrow-textarea').shadowRoot.querySelector('textarea');
+        test('renders text area', () => {
+            assert.isOk(component);
+        });
+    });
+</script>
+</body>
+</html>

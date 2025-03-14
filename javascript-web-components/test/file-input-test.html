@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>File input</title>
+    <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
+    <script src="../node_modules/web-component-tester/browser.js"></script>
+    <script src="../dist/main.js"></script>
+</head>
+<body>
+<file-input id="file-input"></file-input>
+<script>
+    suite('<file-input>', function () {
+        let fileInput = document.getElementById("file-input");
+        test('Render component', () => {
+            assert.isOk(fileInput);
+        });
+        test('Render component content', () => {
+            assert.isOk(fileInput.shadowRoot.querySelector('.file'));
+            assert.isOk(fileInput.shadowRoot.querySelector('input'));
+            assert.isOk(fileInput.shadowRoot.querySelector('label'));
+        });
+    });
+</script>
+</body>
+</html>

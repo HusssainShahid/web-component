@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Data Grid</title>
+    <script src="../dist/main.js"></script>
+</head>
+<body>
+<data-grid
+        api="https://jsonplaceholder.typicode.com/posts"
+        search sortable pagination>
+    <p slot="caption">Data grid</p>
+</data-grid>
+<script>
+    let header = ['User Id', 'Id', 'Title', 'body'];
+    let key = ['userId', 'id', 'title', 'body'];
+    document.getElementsByTagName('data-grid')[0].setAttribute('key', key);
+    document.getElementsByTagName('data-grid')[0].setAttribute("header", header);
+</script>
+</body>
+</html>

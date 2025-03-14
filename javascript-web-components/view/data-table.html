@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Table</title>
+    <script src="../dist/main.js"></script>
+</head>
+<body>
+<data-table theadbg=" #4d4d4d" theadcolor="white">
+    <h1 slot="caption" style="text-align: center">Data Table</h1>
+</data-table>
+<script>
+    let data = [
+        {
+            "name": "Mistri",
+            "start_date": "2019-08-01",
+            "due_date": "2019-08-31",
+            "description": "We can do this",
+            "active_sprint": "S001"
+        }, {
+            "name": "web-components",
+            "start_date": "2019-08-01",
+            "due_date": "2019-08-31",
+            "description": "web components",
+            "active_sprint": "S001"
+        }, {
+            "name": "server-setup",
+            "start_date": "2019-07-15",
+            "due_date": "2019-07-31",
+            "description": "Setup the R720xd and migrate",
+            "active_sprint": "S001"
+        }, {
+            "name": "open-source",
+            "start_date": "2019-06-27",
+            "due_date": "2019-07-11",
+            "description": "open source project",
+            "active_sprint": "S001"
+        }, {
+            "name": "Job-Net",
+            "start_date": "2019-02-01",
+            "due_date": "2019-11-01",
+            "description": "The job board project",
+            "active_sprint": "S001"
+        }, {
+            "name": "MediaVase",
+            "start_date": "2019-05-01",
+            "due_date": "2019-07-31",
+            "description": "The image library",
+            "active_sprint": "S001"
+        }, {
+            "name": "Money-Game",
+            "start_date": "2019-02-01",
+            "due_date": "2019-09-01",
+            "description": "The money-game project",
+            "active_sprint": "S001"
+        }, {
+            "name": "Taskboard",
+            "start_date": "2019-02-01",
+            "due_date": "2019-08-01",
+            "active_sprint": "S001",
+            "description": "The Taskboard project"
+        }];
+    let header = ['Name', 'Start Date', 'Due Date', 'Description'];
+    let key = ['name', 'start_date', 'due_date', 'description'];
+    document.getElementsByTagName('data-table')[0].setAttribute("data", JSON.stringify(data));
+    document.getElementsByTagName('data-table')[0].setAttribute('key', key);
+    document.getElementsByTagName('data-table')[0].setAttribute("header", header);
+</script>
+
+</body>
+</html>

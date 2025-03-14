@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Floating Button</title>
+    <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
+    <script src="../node_modules/web-component-tester/browser.js"></script>
+    <script src="../dist/main.js"></script>
+</head>
+<body>
+<floating-button id="btn" is="light" >
+    <i slot="icon" class="fas fa-heart"></i>
+</floating-button>
+<script>
+
+    suite('<floating-button>', function () {
+        const btn = document.querySelector('#btn');
+        test('render component', () => {
+            assert.isOk(btn);
+        });
+        test('button exist', () => {
+            assert.isOk(btn.shadowRoot.querySelector('.button'));
+        });
+    });
+</script>
+</body>
+</html>

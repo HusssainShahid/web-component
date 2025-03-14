@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tool Bar</title>
+    <script src="https://kit.fontawesome.com/e919059549.js"></script>
+    <script src="../dist/main.js"></script>
+</head>
+<body>
+<tool-bar>
+    <toggle-button multiple>
+        <group-button content="B" active></group-button>
+        <group-button content="I"></group-button>
+        <group-button content="U"></group-button>
+    </toggle-button>
+    <toggle-button single>
+        <group-button active>
+            <i slot="icon" class="fas fa-align-left"></i>
+        </group-button>
+        <group-button>
+            <i slot="icon" class="fas fa-align-justify"></i>
+        </group-button>
+        <group-button>
+            <i slot="icon" class="fas fa-align-right"></i>
+        </group-button>
+    </toggle-button>
+    <input-text placeholder="Enter text here" max="15" min="3" required>
+    </input-text>
+    <button-group>
+        <btn-group slot="button" is="primary" content="primary"></btn-group>
+        <btn-group slot="button" is="secondary" content="secondary"></btn-group>
+        <btn-group slot="button" is="danger" content="danger"></btn-group>
+        <btn-group slot="button" is="primary">
+            <i slot="icon" class="fas fa-heart"></i>
+        </btn-group>
+    </button-group>
+
+</tool-bar>
+</body>
+</html>

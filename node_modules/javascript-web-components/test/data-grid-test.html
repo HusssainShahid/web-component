@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Table</title>
+    <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
+    <script src="../node_modules/web-component-tester/browser.js"></script>
+    <script src="../dist/main.js"></script>
+</head>
+<body>
+<data-grid id="table"
+        api="https://jsonplaceholder.typicode.com/posts"
+        search sortable pagination>
+    <p slot="caption">Data grid</p>
+</data-grid>
+<script>
+    let header = ['User Id', 'Id', 'Title', 'body'];
+    let key = ['userId', 'id', 'title', 'body'];
+    document.getElementsByTagName('data-grid')[0].setAttribute('key', key);
+    document.getElementsByTagName('data-grid')[0].setAttribute("header", header);
+</script><script>
+    suite('<data-grid>', function () {
+        let table = document.getElementById("table");
+        test('render component', () => {
+            assert.isOk(table);
+        });
+        let component = document.querySelector('data-grid').shadowRoot.querySelector('table');
+        test('renders table', () => {
+            assert.isOk(component);
+        });
+        let searchBar = document.querySelector('data-grid').shadowRoot.querySelector('.search-form');
+        test('renders Search bar', () => {
+            assert.isOk(searchBar);
+        });
+        let caption = document.querySelector('data-grid').shadowRoot.querySelector('.caption');
+        test('renders caption', () => {
+            assert.isOk(caption);
+        });
+        let paginationBar = document.querySelector('data-grid').shadowRoot.querySelector('.pagination-bar');
+        test('renders Pagination bar', () => {
+            assert.isOk(paginationBar);
+        });
+    });
+</script>
+</body>
+</html>

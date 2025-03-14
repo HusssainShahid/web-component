@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Email Address</title>
+    <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
+    <script src="../node_modules/web-component-tester/browser.js"></script>
+    <script src="../dist/main.js"></script>
+</head>
+<body>
+<email-address id="input" placeholder="Enter email here"required>
+    <span slot="label">Email</span>
+</email-address>
+
+<script>
+    suite('<email-address>', function () {
+        let emailAddress = document.getElementById("input");
+        test('render component', () => {
+            assert.isOk(emailAddress);
+        });
+        let component = document.querySelector('email-address').shadowRoot.querySelector('input');
+        test('renders input', () => {
+            assert.isOk(component);
+        });
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Input Text</title>
+    <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
+    <script src="../node_modules/web-component-tester/browser.js"></script>
+    <script src="../dist/main.js"></script>
+</head>
+<body>
+<input-text id="input" placeholder="Enter your name here.." max="15" min="3" required>
+    <span slot="label">Name</span>
+</input-text>
+
+<script>
+    suite('<input-text>', function () {
+        let inputText = document.getElementById("input");
+        test('render component', () => {
+            assert.isOk(inputText);
+        });
+        let component = document.querySelector('input-text').shadowRoot.querySelector('input');
+        test('renders input', () => {
+            assert.isOk(component);
+        });
+    });
+</script>
+</body>
+</html>

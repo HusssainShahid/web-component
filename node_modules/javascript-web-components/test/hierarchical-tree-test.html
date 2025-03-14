@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hierarchical tree</title>
+    <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
+    <script src="../node_modules/web-component-tester/browser.js"></script>
+    <script src="../dist/main.js"></script>
+</head>
+<body>
+<hierarchical-tree id="tree">
+    <tree-node value="Node"></tree-node>
+    <tree-node value="Node"></tree-node>
+</hierarchical-tree>
+<script>
+
+    suite('<hierarchical-tree>', function () {
+        const tree = document.querySelector('#tree');
+        test('render component', () => {
+            assert.isOk(tree);
+        });
+        test('tree node component exist', () => {
+            assert.isOk(tree.querySelector('tree-node'));
+        });
+    });
+</script>
+</body>
+</html>

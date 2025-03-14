@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Checkbox</title>
+    <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
+    <script src="../node_modules/web-component-tester/browser.js"></script>
+    <script src="../dist/main.js"></script>
+</head>
+<body>
+<check-box id="check-box">
+    <span slot="label">Man</span>
+</check-box>
+<script>
+    suite('<check-box>', function () {
+        let checkBox = document.getElementById("check-box");
+        test('render component', () => {
+            assert.isOk(checkBox);
+        });
+        let component = document.querySelector('check-box').shadowRoot.querySelector('input');
+        test('renders div', () => {
+            assert.isOk(component);
+        });
+    });
+</script>
+</body>
+</html>

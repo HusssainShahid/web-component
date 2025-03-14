@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Buttons</title>
+    <script src="../dist/main.js"></script>
+</head>
+<body style="padding: 40px;">
+<h1>Flat button component</h1>
+<flat-button content="Default"></flat-button>
+<flat-button is="primary" content="Primary" disable></flat-button>
+<flat-button is="secondary" content="Secondary"></flat-button>
+<flat-button is="success" content="Success" disable></flat-button>
+<flat-button is="info" content="Info"></flat-button>
+<flat-button is="warning" content="Warning"></flat-button>
+<flat-button is="danger" content="Danger"></flat-button>
+<h1>Raised Button Component</h1>
+<p>On hover these button shows shadow</p>
+<raised-button content="Default"></raised-button>
+<raised-button is="primary" content="Primary"></raised-button>
+<raised-button is="secondary" content="Secondary" disable></raised-button>
+<raised-button is="success" content="Success"></raised-button>
+<raised-button is="info" content="Info"></raised-button>
+<raised-button is="warning" content="Warning"></raised-button>
+<raised-button is="danger" content="Danger" disable></raised-button>
+<h1>Outline Button Component</h1>
+<outline-button content="Default"></outline-button>
+<outline-button is="primary" content="Primary"></outline-button>
+<outline-button is="secondary" content="Secondary"></outline-button>
+<outline-button is="success" content="Success" disable></outline-button>
+<outline-button is="info" content="Info"></outline-button>
+<outline-button is="warning" content="Warning" disable></outline-button>
+<outline-button is="danger" content="Danger"></outline-button>
+
+<h1>Text button component</h1>
+<text-button content="Default"></text-button>
+<text-button is="primary" content="Primary"></text-button>
+<text-button is="secondary" content="Secondary"></text-button>
+<text-button is="success" content="Success" disable></text-button>
+<text-button is="info" content="Info"></text-button>
+<text-button is="warning" content="Warning" disable></text-button>
+<text-button is="danger" content="Danger"></text-button>
+
+<h1>Link button component</h1>
+<link-button content="Link"></link-button>
+
+<h1>Floating button component</h1>
+<floating-button is="Default" round shadow >
+    <i slot="icon" class="fas fa-heart"></i>
+</floating-button>
+<floating-button is="dark" round disable>
+    <i slot="icon" class="fas fa-heart"></i>
+</floating-button>
+<floating-button is="light">
+    <i slot="icon" class="fas fa-heart"></i>
+</floating-button>
+
+<h1>Button Group</h1>
+<button-group>
+    <btn-group slot="button" is="primary" content="primary" ></btn-group>
+    <btn-group slot="button" is="secondary" content="secondary"></btn-group>
+    <btn-group slot="button" is="danger" content="danger" disable></btn-group>
+    <btn-group slot="button" is="primary">
+        <i slot="icon" class="fas fa-heart"></i>
+    </btn-group>
+</button-group>
+<script src="https://kit.fontawesome.com/e919059549.js"></script>
+</body>
+</html>

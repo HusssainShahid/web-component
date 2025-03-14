@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>J-components</title>
+    <link rel="stylesheet" href="themes/bootstrap.css">
+    <script src="dist/main.js"></script>
+</head>
+<body>
+<div class="container my-5">
+    <h1 class="text-center my-3">J-Component</h1>
+    <!--input component-->
+    <h2 class="my-4">Input Component</h2>
+    <div class="row">
+        <div class="col-6">
+            <input-text placeholder="Enter your name here.." max="15" min="3" required>
+                <span slot="label">Name</span>
+            </input-text>
+        </div>
+        <div class="col-6">
+            <input-number value="256" disable max="15" min="3" required>
+                <span slot="label">Number</span>
+            </input-number>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-6">
+            <email-address placeholder="This is disable" disable required>
+                <span slot="label">Email</span>
+            </email-address>
+        </div>
+        <div class="col-6">
+            <autogrow-textarea rows="2" placeholder="Enter here.." max="250" min="3" required>
+                <span slot="label">Description</span>
+            </autogrow-textarea>
+        </div>
+    </div>
+    <file-input multiple image></file-input>
+    <input-password max="15" min="3" placeholder="Enter your password" required>
+        <span slot="label">Password</span>
+    </input-password>
+    <!--alert messages-->
+    <h2 class="my-4">Alert Messages</h2>
+    <alert-message is="default">
+        <label slot="message">Default</label>
+    </alert-message>
+    <div class="row">
+        <div class="col-6">
+            <alert-message is="primary">
+                <label slot="message">Primary</label>
+            </alert-message>
+        </div>
+        <div class="col-6">
+            <alert-message is="secondary">
+                <label slot="message">Secondary</label>
+            </alert-message>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-6">
+            <alert-message is="warning">
+                <label slot="message">Warning</label>
+            </alert-message>
+        </div>
+        <div class="col-6">
+            <alert-message is="success">
+                <label slot="message">Success</label>
+            </alert-message>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-6">
+            <alert-message is="info">
+                <label slot="message">Info</label>
+            </alert-message>
+        </div>
+        <div class="col-6">
+            <alert-message is="danger">
+                <label slot="message">Danger</label>
+            </alert-message>
+        </div>
+    </div>
+    <!--avatar list-->
+    <h1 class="my-4">Avatar List</h1>
+    <div class="row">
+        <div class="col-6">
+            <h5>Dark</h5>
+            <avatar-list dark>
+                <h2 slot="header">Card list</h2>
+                <avatar-card slot="card">
+                    <img-item slot="img"
+                              src="https://cms-assets.tutsplus.com/uploads/users/1451/posts/28622/preview_image/custom-html-tag.png"
+                              alt="Img"
+                              width="60px"
+                              height="60px"
+                    ></img-item>
+                    <div slot="body">
+                        <b>Name: </b><span>Abcd abcd</span><br>
+                    </div>
+                    <div slot="body">
+                        <b>Position: </b><span>Web Developer</span><br>
+                    </div>
+                    <div slot="body">
+                        <b>Position Id: </b><span>123</span><br>
+                    </div>
+                </avatar-card>
+                <avatar-card slot="card">
+                    <img-item slot="img"
+                              src="https://cms-assets.tutsplus.com/uploads/users/1451/posts/28622/preview_image/custom-html-tag.png"
+                              alt="Img"
+                              width="60px"
+                              height="60px"
+                    ></img-item>
+                    <div slot="body">
+                        <b>Name: </b><span>Abcd abcd</span><br>
+                    </div>
+                    <div slot="body">
+                        <b>Position: </b><span>Web Developer</span><br>
+                    </div>
+                    <div slot="body">
+                        <b>Position Id: </b><span>123</span><br>
+                    </div>
+                </avatar-card>
+                <avatar-card slot="card">
+                    <img-item slot="img"
+                              src="https://cms-assets.tutsplus.com/uploads/users/1451/posts/28622/preview_image/custom-html-tag.png"
+                              alt="Img"
+                              width="60px"
+                              height="60px"
+                    ></img-item>
+                    <div slot="body">
+                        <b>Name: </b><span>Abcd abcd</span><br>
+                    </div>
+                    <div slot="body">
+                        <b>Position: </b><span>Web Developer</span><br>
+                    </div>
+                    <div slot="body">
+                        <b>Position Id: </b><span>123</span><br>
+                    </div>
+                </avatar-card>
+            </avatar-list>
+        </div>
+        <div class="col-6">
+            <h5>Light</h5>
+            <avatar-list>
+                <h2 slot="header">Card list</h2>
+                <avatar-card slot="card">
+                    <img-item slot="img"
+                              src="https://cms-assets.tutsplus.com/uploads/users/1451/posts/28622/preview_image/custom-html-tag.png"
+                              alt="Img"
+                              width="60px"
+                              height="60px"
+                    ></img-item>
+                    <div slot="body">
+                        <b>Name: </b><span>Abcd abcd</span><br>
+                    </div>
+                    <div slot="body">
+                        <b>Position: </b><span>Web Developer</span><br>
+                    </div>
+                    <div slot="body">
+                        <b>Position Id: </b><span>123</span><br>
+                    </div>
+                </avatar-card>
+                <avatar-card slot="card">
+                    <img-item slot="img"
+                              src="https://cms-assets.tutsplus.com/uploads/users/1451/posts/28622/preview_image/custom-html-tag.png"
+                              alt="Img"
+                              width="60px"
+                              height="60px"
+                    ></img-item>
+                    <div slot="body">
+                        <b>Name: </b><span>Abcd abcd</span><br>
+                    </div>
+                    <div slot="body">
+                        <b>Position: </b><span>Web Developer</span><br>
+                    </div>
+                    <div slot="body">
+                        <b>Position Id: </b><span>123</span><br>
+                    </div>
+                </avatar-card >
+                <avatar-card slot="card">
+                    <img-item slot="img"
+                              src="https://cms-assets.tutsplus.com/uploads/users/1451/posts/28622/preview_image/custom-html-tag.png"
+                              alt="Img"
+                              width="60px"
+                              height="60px"
+                    ></img-item>
+                    <div slot="body">
+                        <b>Name: </b><span>Abcd abcd</span><br>
+                    </div>
+                    <div slot="body">
+                        <b>Position: </b><span>Web Developer</span><br>
+                    </div>
+                    <div slot="body">
+                        <b>Position Id: </b><span>123</span><br>
+                    </div>
+                </avatar-card>
+            </avatar-list>
+        </div>
+    </div>
+    <!--buttons-->
+    <h1 class="my-4">Buttons</h1>
+    <div class="row">
+        <div class="col-6">
+            <h5 class="my-4">FLat Button</h5>
+            <flat-button content="Default"></flat-button>
+            <flat-button is="primary" content="Primary" disable></flat-button>
+            <flat-button is="secondary" content="Secondary"></flat-button>
+            <flat-button is="success" content="Success" disable></flat-button>
+            <flat-button is="info" content="Info"></flat-button>
+            <flat-button is="warning" content="Warning"></flat-button>
+            <flat-button is="danger" content="Danger"></flat-button>
+        </div>
+        <div class="col-6">
+            <h5 class="my-4">Raised Button</h5>
+            <raised-button content="Default"></raised-button>
+            <raised-button is="primary" content="Primary"></raised-button>
+            <raised-button is="secondary" content="Secondary" disable></raised-button>
+            <raised-button is="success" content="Success"></raised-button>
+            <raised-button is="info" content="Info"></raised-button>
+            <raised-button is="warning" content="Warning" disable></raised-button>
+            <raised-button is="danger" content="Danger"></raised-button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-6">
+            <h5 class="my-4">Outline Button</h5>
+            <outline-button content="Default"></outline-button>
+            <outline-button is="primary" content="Primary"></outline-button>
+            <outline-button is="secondary" content="Secondary" disable></outline-button>
+            <outline-button is="success" content="Success"></outline-button>
+            <outline-button is="info" content="Info"></outline-button>
+            <outline-button is="warning" content="Warning"></outline-button>
+            <outline-button is="danger" content="Danger" disable></outline-button>
+        </div>
+        <div class="col-6">
+            <h5 class="my-4">Text button</h5>
+            <text-button content="Default"></text-button>
+            <text-button is="primary" content="Primary"></text-button>
+            <text-button is="secondary" content="Secondary" disable></text-button>
+            <text-button is="success" content="Success" disable></text-button>
+            <text-button is="info" content="Info"></text-button>
+            <text-button is="warning" content="Warning"></text-button>
+            <text-button is="danger" content="Danger"></text-button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-6">
+            <h5 class="my-4">Group Button</h5>
+            <button-group>
+                <btn-group slot="button" is="primary" content="primary" disable></btn-group>
+                <btn-group slot="button" is="secondary" content="secondary"></btn-group>
+                <btn-group slot="button" is="danger" content="danger"></btn-group>
+                <btn-group slot="button" is="primary">
+                    <i slot="icon" class="fas fa-heart"></i>
+                </btn-group>
+            </button-group>
+        </div>
+        <div class="col-6">
+            <div class="row">
+                <div class="col-6">
+                    <h5 class="my-4">Link button</h5>
+                    <link-button content="Link" disable></link-button>
+                </div>
+                <div class="col-6">
+                    <h5 class="my-4">Floating button</h5>
+                    <floating-button is="Default" round shadow disable>
+                        <i slot="icon" class="fas fa-heart"></i>
+                    </floating-button>
+                    <floating-button is="dark" round>
+                        <i slot="icon" class="fas fa-heart"></i>
+                    </floating-button>
+                    <floating-button is="light">
+                        <i slot="icon" class="fas fa-heart"></i>
+                    </floating-button>
+                </div>
+                <div class="col-12">
+                    <h5>Toggle button</h5>
+                    <tool-bar>
+                        <toggle-button multiple>
+                            <group-button content="B" active></group-button>
+                            <group-button content="I"></group-button>
+                            <group-button content="U"></group-button>
+                        </toggle-button>
+                        <toggle-button single>
+                            <group-button active>
+                                <i slot="icon" class="fas fa-align-left"></i>
+                            </group-button>
+                            <group-button>
+                                <i slot="icon" class="fas fa-align-justify"></i>
+                            </group-button>
+                            <group-button>
+                                <i slot="icon" class="fas fa-align-right"></i>
+                            </group-button>
+                        </toggle-button>
+                        <toggle-button multiple>
+                            <group-button content="B" active></group-button>
+                            <group-button content="I"></group-button>
+                            <group-button content="U"></group-button>
+                        </toggle-button>
+                    </tool-bar>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--call out-->
+    <h2 class="my-4">Call Out</h2>
+    <call-out>
+        <h5 slot="header">Header</h5>
+        <p slot="body">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
+            ut labore et dolore magna aliqua.sint occaecat cupidatat non proident, sunt in culpa qui officia
+            deserunt mollit anim id est laborum.</p>
+    </call-out>
+    <div class="row">
+        <div class="col-6">
+            <call-out is="primary">
+                <h5 slot="header">Header</h5>
+                <p slot="body">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                    incididunt
+                    ut labore et dolore magna alicepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+                    deserunt mollit anim id est laborum.</p>
+            </call-out>
+        </div>
+        <div class="col-6">
+            <call-out is="secondary">
+                <h5 slot="header">Header</h5>
+                <p slot="body">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                    incididunt
+                    ut labore et dolore magna al. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
+                    officia
+                    deserunt mollit anim id est laborum.</p>
+            </call-out>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-6">
+            <call-out is="info">
+                <h5 slot="header">Header</h5>
+                <p slot="body">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                    incididunt
+                    ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                    nisi ut
+                    aliquip ex ea commodo consequa. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
+                    officia
+                    deserunt mollit anim id est laborum.</p>
+            </call-out>
+        </div>
+        <div class="col-6">
+            <call-out is="warning">
+                <h5 slot="header">Header</h5>
+                <p slot="body">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                    incididunt
+                    ut labore et dolore magpariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
+                    officia
+                    deserunt mollit anim id est laborum.</p>
+            </call-out>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-6">
+            <call-out is="danger">
+                <h5 slot="header">Header</h5>
+                <p slot="body">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                    incididunt
+                    ut labore et dolore ma pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
+                    officia
+                    deserunt mollit anim id est laborum.</p>
+            </call-out>
+        </div>
+        <div class="col-6">
+            <call-out is="success">
+                <h5 slot="header">Header</h5>
+                <p slot="body">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                    incididunt
+                    ut labore et dolore magna alatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
+                    officia
+                    deserunt mollit anim id est laborum.</p>
+            </call-out>
+        </div>
+    </div>
+    <!--checkbox-->
+    <h2 class="my-4">Check boxes</h2>
+    <check-box>
+        <span>Man</span>
+    </check-box>
+    <check-box disabled checked>
+        <span>Woman</span>
+    </check-box>
+    <h5 class="text-center">Custom Check boxes</h5>
+    <div class="row">
+        <div class="col-6">
+            <custom-checkbox round></custom-checkbox>
+            <custom-checkbox switch checked></custom-checkbox>
+        </div>
+        <div class="col-6">
+            <custom-checkbox tab checked></custom-checkbox>
+            <custom-checkbox power></custom-checkbox>
+        </div>
+    </div>
+    <h2 class="my-4">Data Table</h2>
+    <div class="row">
+        <div class="col-6">
+            <data-table dark></data-table>
+        </div>
+        <div class="col-6">
+            <data-table theadbg=" #4d4d4d" theadcolor="white"></data-table>
+        </div>
+    </div>
+    <h2 class="my-4">Image</h2>
+    <div class="row">
+        <div class="col-4">
+            <img-item
+                    src="https://cms-assets.tutsplus.com/uploads/users/1451/posts/28622/preview_image/custom-html-tag.png"
+                    alt="img"
+                    caption="This is HTML pic."
+            ></img-item>
+        </div>
+        <div class="col-4">
+            <img-item
+                    src="https://www.elegantthemes.com/blog/wp-content/uploads/2018/12/top11.png"
+                    alt="img"
+                    caption="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                    incididunt"
+            ></img-item>
+        </div>
+        <div class="col-4">
+            <img-item
+                    src="http://blog.hyperiondev.com/wp-content/uploads/2019/02/Blog-Types-of-Web-Dev.jpg"
+                    alt="img"
+                    caption="This is HTML pic."
+            ></img-item>
+        </div>
+    </div>
+    <!--Notifications-->
+    <h2 class="my-4">Notifications</h2>
+    <h5>Press them to get Notification</h5>
+    <notice-board>
+        <notice-sliding
+                slot="notice"
+                header="Hello"
+                body="My name is abcd"
+                is="warning"
+                autoclose>
+            <img slot='icon'
+                 src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/SNice.svg/1200px-SNice.svg.png">
+            <outline-button content="Smiley" is="warning" slot="button"></outline-button>
+        </notice-sliding>
+        <notice-sliding
+                slot="notice"
+                header="Hello"
+                body="My name is abcd"
+                is="success">
+            <h2 slot="icon">&#9749;</h2>
+            <outline-button content="Coffee" is="success" slot="button"></outline-button>
+        </notice-sliding>
+        <notice-sliding
+                slot="notice"
+                header="Hello"
+                body="My name is abcd"
+                is="primary">
+            <h2 slot="icon">&#9917;</h2>
+            <outline-button content="Foot ball" is="primary" slot="button"></outline-button>
+        </notice-sliding>
+    </notice-board>
+    <!--time card and line card-->
+    <div class="row">
+        <div class="col-7">
+            <h2 class="my-4">Time card</h2>
+            <time-card>
+                <city-name slot="city-name" content="Lahore"></city-name>
+                <full-date slot="full-date" content="9/5/2019"></full-date>
+                <local-time slot="local-time" content="10:29"></local-time>
+                <meridiem-period slot="period" content="AM"></meridiem-period>
+            </time-card>
+        </div>
+        <div class="col-5">
+            <h2 class="my-4">Line Card</h2>
+            <line-card
+                    api="http://money-game.com/api/business"
+                    message="This is a message"
+                    method="POST">
+            </line-card>
+        </div>
+    </div>
+    <!--tool bar-->
+    <h2 class="my-4">Tool bar</h2>
+    <tool-bar>
+        <toggle-button multiple>
+            <group-button content="B" active></group-button>
+            <group-button content="I"></group-button>
+            <group-button content="U"></group-button>
+        </toggle-button>
+        <toggle-button single>
+            <group-button active>
+                <i slot="icon" class="fas fa-align-left"></i>
+            </group-button>
+            <group-button>
+                <i slot="icon" class="fas fa-align-justify"></i>
+            </group-button>
+            <group-button>
+                <i slot="icon" class="fas fa-align-right"></i>
+            </group-button>
+        </toggle-button>
+        <input-text placeholder="Enter text here" max="15" min="3" required>
+        </input-text>
+        <button-group>
+            <btn-group slot="button" is="primary" content="primary"></btn-group>
+            <btn-group slot="button" is="secondary" content="secondary"></btn-group>
+            <btn-group slot="button" is="danger" content="danger"></btn-group>
+            <btn-group slot="button" is="primary">
+                <i slot="icon" class="fas fa-heart"></i>
+            </btn-group>
+        </button-group>
+    </tool-bar>
+    <div class="m-5">
+    <h1>Pop up component</h1>
+    <pop-up>
+        <outline-button slot='open-modal' content="Modal"></outline-button>
+        <div slot="modal-body">
+            <h4>Here is the modal body</h4>
+        </div>
+    </pop-up>
+    </div>
+    <div class="m-5">
+        <a-href target="_top" href="https://stackoverflow.com/">Stack Overflow</a-href>
+        <heading-text display="xl">Heading</heading-text>
+    </div>
+    <div class="m-5">
+        <heading-text display="lg">Radio Group Component</heading-text>
+        <radio-group>
+            <radio-button>Option 1</radio-button>
+            <radio-button>Option 2</radio-button>
+            <radio-button>Option 3</radio-button>
+            <radio-button>Option 4</radio-button>
+        </radio-group>
+    </div>
+    <div class="m-5">
+        <heading-text display="lg" center>Data Grid</heading-text>
+        <data-grid
+                api="https://jsonplaceholder.typicode.com/posts"
+                search sortable pagination>
+            <p slot="caption">Data grid</p>
+        </data-grid>
+        <script>
+            let headerGrid = ['User Id', 'Id', 'Title', 'body'];
+            let keyGrid = ['userId', 'id', 'title', 'body'];
+            document.getElementsByTagName('data-grid')[0].setAttribute('key', keyGrid);
+            document.getElementsByTagName('data-grid')[0].setAttribute("header", headerGrid);
+        </script>
+    </div>
+    <hierarchical-tree>
+        <tree-node value="parent">
+            <tree-node value="child 1">
+                <tree-node value="grand child 1.1">
+                    <tree-node value="great grand child 1.1.1"></tree-node>
+                    <tree-node value="great grand child 1.1.2"></tree-node>
+                </tree-node>
+                <tree-node value="grand child 1.2"></tree-node>
+                <tree-node value="grand child 1.3"></tree-node>
+            </tree-node>
+            <tree-node value="child 2">
+                <tree-node value="grand child 2.1"></tree-node>
+            </tree-node>
+            <tree-node value="child 3">
+                <tree-node value="grand child 3.1"></tree-node>
+                <tree-node value="grand child 3.2"></tree-node>
+                <tree-node value="grand child 3.3">
+                    <tree-node value="great grand child 3.3.1"></tree-node>
+                    <tree-node value="great grand child 3.3.2"></tree-node>
+                    <tree-node value="great grand child 3.3.3"></tree-node>
+                </tree-node>
+            </tree-node>
+        </tree-node>
+    </hierarchical-tree>
+</div>
+<script>
+    let data = [
+        {
+            "name": "Mistri",
+            "start_date": "2019-08-01",
+            "due_date": "2019-08-31",
+            "description": "We can do this",
+            "active_sprint": "S001"
+        }, {
+            "name": "web-components",
+            "start_date": "2019-08-01",
+            "due_date": "2019-08-31",
+            "description": "web components",
+            "active_sprint": "S001"
+        }, {
+            "name": "server-setup",
+            "start_date": "2019-07-15",
+            "due_date": "2019-07-31",
+            "description": "Setup the R720xd and migrate",
+            "active_sprint": "S001"
+        }];
+    let header = ['Name', 'Start Date', 'Due Date', 'Description'];
+    let key = ['name', 'start_date', 'due_date', 'description'];
+    document.getElementsByTagName('data-table')[0].setAttribute("data", JSON.stringify(data));
+    document.getElementsByTagName('data-table')[0].setAttribute('key', key);
+    document.getElementsByTagName('data-table')[0].setAttribute("header", header);
+    document.getElementsByTagName('data-table')[1].setAttribute("data", JSON.stringify(data));
+    document.getElementsByTagName('data-table')[1].setAttribute('key', key);
+    document.getElementsByTagName('data-table')[1].setAttribute("header", header);
+</script>
+<script src="https://kit.fontawesome.com/e919059549.js"></script>
+</body>
+</html>
